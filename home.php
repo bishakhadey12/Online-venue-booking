@@ -34,7 +34,7 @@ include("header.php");
     <div>
       <h1>Book Your Perfect Venue Online</h1>
       <p class="lead">Weddings • Conferences • Parties • Concerts</p>
-      <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+      <a href="index.php" class="btn btn-primary btn-lg">Get Started</a>
     </div>
   </section>
 

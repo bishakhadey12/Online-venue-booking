@@ -67,7 +67,7 @@
           <li class="nav-item"><a class="nav-link" href="price.php">Pricing</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="venue.html">Venues</a></li>
-          <li class="nav-item"><a class="nav-link active" href="login.php">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
           <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
         </ul>
       </div>
