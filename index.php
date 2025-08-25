@@ -2,14 +2,6 @@
 include("header.php");
 ?>
 
-  <!-- Reservation Header -->
-  <section class="reservation-header">
-    <div>
-      <h1>Reserve Your Venue</h1>
-      <p class="lead">Fill out the form below to book your perfect venue</p>
-    </div>
-  </section>
-
   <!-- Reservation Form Section -->
   <section class="py-5">
     <div class="container">
