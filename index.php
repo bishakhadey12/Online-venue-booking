@@ -1,67 +1,82 @@
-<?php include("header.php"); ?>
+<?php 
+include("header.php");
+?>
 
-<div class="container mt-5">
-    <div class="text-center mb-4">
-        <h1 class="display-5">Reserve Your Place</h1>
-        <p class="lead">Book your venue quickly and easily</p>
+  <!-- Reservation Header -->
+  <section class="reservation-header">
+    <div>
+      <h1>Reserve Your Venue</h1>
+      <p class="lead">Fill out the form below to book your perfect venue</p>
     </div>
+  </section>
 
-    <div class="card shadow-lg">
-        <div class="card-body">
-            <h2 class="card-title text-center mb-4">Booking Form</h2>
+  <!-- Reservation Form Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
 
-            <form action="submit_booking.php" method="post">
-                <div class="mb-3">
-                    <label for="reservation-type" class="form-label">Reservation Type</label>
-                    <select id="reservation-type" name="reservation_type" class="form-select" required>
-                        <option value="">-- Select Type --</option>
-                        <option value="conference">Conference</option>
-                        <option value="wedding">Wedding</option>
-                        <option value="party">Party</option>
-                        <option value="meeting">Meeting</option>
-                        <option value="other">Coachin</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="start-date" class="form-label">From Date & Time</label>
-                        <input type="datetime-local" id="start-date" name="start_datetime" class="form-control" required>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <label for="end-date" class="form-label">To Date & Time</label>
-                        <input type="datetime-local" id="end-date" name="end_datetime" class="form-control" required>
-                    </div>
-                </div>
-
-                <div class="col-md-2">
-                    <label for="total-people" class="form-label">Total People</label>
-                    <input type="number" id="total-people" name="total_people" min="1" class="form-control" required>
-</div>
-                <div class="col-md-2 mb-3">
-                    <label class="form-label d-block">Choose AC / Non-AC</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="ac_option" id="ac" value="AC" required>
-                        <label class="form-check-label" for="ac">AC</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="ac_option" id="non-ac" value="Non-AC" required>
-                        <label class="form-check-label" for="non-ac">Non-AC</label>
-                    </div>
-                </div>
-
-                <div class="mb-4">
-                    <label for="extra-queries" class="form-label">Any Queries / Extra Requirements</label>
-                    <textarea id="extra-queries" name="extra_queries" rows="4" class="form-control" placeholder="Let us know if you need catering, projector, special seating, etc."></textarea>
-                </div>
-
-                <div class="d-grid">
-                    <button class="bg-green-600 text-white px-4 py-2 rounded">Submit</button>
-
-                </div>
+        <!-- Form -->
+        <div class="col-md-6">
+          <div class="form-section">
+            <h3 class="mb-4 text-center">Reservation Form</h3>
+            <form action="submit_booking.php" method="POST">
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" name="name" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" name="email" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="text" name="phone" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Select Venue</label>
+                <select name="venue" class="form-select" required>
+                  <option value="">-- Choose a Venue --</option>
+                  <option value="Banquet Hall">Banquet Hall</option>
+                  <option value="Open Lawn">Open Lawn</option>
+                  <option value="Conference Room">Conference Room</option>
+                  <option value="Luxury Hall">Luxury Hall</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Booking Date</label>
+                <input type="date" name="date" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Number of Guests</label>
+                <input type="number" name="guests" class="form-control">
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Reservation</button>
+              </div>
             </form>
+          </div>
         </div>
+
+        <!-- Venue Pictures -->
+        <div class="col-md-6">
+          <div class="row g-3">
+            <div class="col-6">
+              <img src="https://images.unsplash.com/photo-1591608516481-99c2c4b5a99d" class="venue-img" alt="Wedding Hall">
+            </div>
+            <div class="col-6">
+              <img src="https://images.unsplash.com/photo-1508896694512-1eade5586798" class="venue-img" alt="Luxury Venue">
+            </div>
+            <div class="col-6">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="venue-img" alt="Banquet">
+            </div>
+            <div class="col-6">
+              <img src="https://images.unsplash.com/photo-1529634896389-2a7d2f56f89a" class="venue-img" alt="Conference Room">
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-</div>
+  </section>
+
+   <?php include("footer.php");?>

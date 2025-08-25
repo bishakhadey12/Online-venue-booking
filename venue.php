@@ -20,7 +20,7 @@
 
                         <!-- Venue Area -->
                         <div class="form-group mb-3">
-                            <label for="Varea">Area</label>
+                            <label for="Varea">Full Address</label>
                             <input type="text" name="venue_area" class="form-control" id="Varea" placeholder="Enter Area/Location" required>
                         </div>
 
@@ -28,7 +28,7 @@
                         <div class="form-group mb-3">
                             <label for="Vtype">Type</label>
                             <select class="form-control" name="venue_type" id="Vtype" required>
-                                <option value="">-- Select Type --</option>
+                                <option value="">--  Type Ac/Non-Ac--</option>
                                 <option value="AC">AC</option>
                                 <option value="Non-AC">Non-AC</option>
                             </select>

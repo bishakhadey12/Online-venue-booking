@@ -45,7 +45,7 @@
                                        id="conform password" 
                                        placeholder="conform Password"
                                     required />
-                            </div>
+                            </div><br>
                             <a href="venue.php" class="btn btn-outline-success">Register</a>
                         </form>                            
                     </div>
@@ -54,3 +54,4 @@
         </div>
     </div>
 </body>
+ <?php include("footer.php");?>
