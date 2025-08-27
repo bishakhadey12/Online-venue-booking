@@ -2,16 +2,23 @@
 include("header.php");
 ?>
 
+<div class="container text-success text-center">
+<?php
+if(isset($_SESSION['sms'])){
+    echo "<h3 class='text-danger'>".$_SESSION['sms']."</h3>";
+    unset($_SESSION['sms']); // clear message
+}
+?>
+</div>
   <!-- Reservation Form Section -->
   <section class="py-5">
     <div class="container">
       <div class="row g-4 align-items-center">
-
         <!-- Form -->
         <div class="col-md-6">
           <div class="form-section">
             <h3 class="mb-4 text-center">Reservation Form</h3>
-            <form action="submit_booking.php" method="POST">
+            <form action="backend/reservation.php" method="POST">
               <div class="mb-3">
                 <label class="form-label">Full Name</label>
                 <input type="text" name="name" class="form-control" required>
@@ -53,16 +60,16 @@ include("header.php");
         <div class="col-md-6">
           <div class="row g-3">
             <div class="col-6">
-              <img src="https://images.unsplash.com/photo-1591608516481-99c2c4b5a99d" class="venue-img" alt="Wedding Hall">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_vlqvZqX82v8PebJ1zPfFtSEyeFnHewMnQQ&s" class="venue-img" alt="Wedding Hall">
             </div>
             <div class="col-6">
-              <img src="https://images.unsplash.com/photo-1508896694512-1eade5586798" class="venue-img" alt="Luxury Venue">
+              <img src="https://png.pngtree.com/thumb_back/fh260/background/20250506/pngtree-luxurious-wedding-venue-decor-image_17259968.jpg" class="venue-img" alt="Luxury Venue">
             </div>
             <div class="col-6">
               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="venue-img" alt="Banquet">
             </div>
             <div class="col-6">
-              <img src="https://images.unsplash.com/photo-1529634896389-2a7d2f56f89a" class="venue-img" alt="Conference Room">
+              <img src="https://islamabadclub.org.pk/ic/wp-content/uploads/2019/02/JU9A9495.jpg" class="venue-img" alt="Conference Room">
             </div>
           </div>
         </div>
