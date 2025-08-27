@@ -1,4 +1,6 @@
 <?php 
+session_start();
+$conn=mysqli_connect("localhost","root","","online_venue_booking");
 include("header.php");
 ?>
 
