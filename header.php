@@ -66,7 +66,7 @@
           <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="price.php">Pricing</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="venue.html">Venues</a></li>
+          <li class="nav-item"><a class="nav-link" href="guide.php">Guide</a></li>
           <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
           <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
         </ul>

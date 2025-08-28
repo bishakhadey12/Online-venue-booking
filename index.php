@@ -7,7 +7,7 @@ include("header.php");
 <div class="container text-success text-center">
 <?php
 if(isset($_SESSION['sms'])){
-    echo "<h3 class='text-danger'>".$_SESSION['sms']."</h3>";
+    echo "<h3 class='text-success'>".$_SESSION['sms']."</h3>";
     unset($_SESSION['sms']); // clear message
 }
 ?>

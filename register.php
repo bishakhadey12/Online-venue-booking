@@ -7,9 +7,9 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <form id="registrationForm" action="post">
+                        <form id="registrationForm" action="backend/ownerdetails.php" method="post">
                             <div class="form-group">
-                                <label for="email">OWNER NAME </label>
+                                <label for="name">OWNER NAME </label>
                                 <input type="text" 
                                        class="form-control" 
                                        id="name" 

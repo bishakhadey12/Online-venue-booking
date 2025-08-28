@@ -67,30 +67,10 @@
     </small>
 </div>
 
-<!-- Contact & Social Media Section -->
-<div class="form-group mb-3">
-    <label for="Vphone">Phone Number</label>
-    <input type="tel" name="venue_phone" class="form-control" id="Vphone" placeholder="Enter Contact Number" required>
-</div>
+<!-- any Social Media Links -->
 
 <div class="form-group mb-3">
-    <label for="Vemail">Email Address</label>
-    <input type="email" name="venue_email" class="form-control" id="Vemail" placeholder="Enter Email Address" required>
-</div>
-
-<!-- Social Media Links -->
-<div class="form-group mb-3">
-    <label for="Vfb">Facebook Link</label>
-    <input type="url" name="venue_facebook" class="form-control" id="Vfb" placeholder="Enter Facebook Page/Profile Link">
-</div>
-
-<div class="form-group mb-3">
-    <label for="Vinsta">Instagram Link</label>
-    <input type="url" name="venue_instagram" class="form-control" id="Vinsta" placeholder="Enter Instagram Profile Link">
-</div>
-
-<div class="form-group mb-3">
-    <label for="Vother">Other Social Media (Optional)</label>
+    <label for="Vother">Other Social Media links (Optional)</label>
     <input type="url" name="venue_other" class="form-control" id="Vother" placeholder="Enter Website / Other Social Link">
 </div>
 
