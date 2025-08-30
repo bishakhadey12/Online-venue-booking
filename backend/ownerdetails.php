@@ -25,9 +25,13 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
    $insert_query=mysqli_query($conn,"INSERT INTO `ownerdetails`(`Ownername`, `PHNO`, `EMAIL`, `PASSWORD`) VALUES ('$name','$number','$email','$hashpasword')");
 
    if($insert_query){
-    $_SESSION['sms']="new user created successfully";
-    header("location:../register.php");
-    return;
-   }
+    $_SESSION['sms'] = "Registration Successful!";
+        header("Location:../venue.php"); // redirect to venue creation
+        exit;
+    } else {
+        $_SESSION['sms'] = "Error: ".mysqli_error($conn);
+        header("Location:../register.php");
+        exit;
+    }
 }
 ?>

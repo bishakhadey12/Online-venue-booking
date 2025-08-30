@@ -45,7 +45,7 @@ if(isset($_SESSION['sms'])){
               </div>
               <div class="mb-3">
                 <label class="form-label">Booking Date</label>
-                <input type="date" name="date" class="form-control" required>
+                <input type="date" name="venue_date" class="form-control" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">Number of Guests</label>
