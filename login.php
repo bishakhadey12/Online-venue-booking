@@ -43,7 +43,7 @@
                         </form>
                         <p class="mt-3">
                             Not registered?
-                            <a href="Register.php">Register now</a>
+                            <a href="register.php">Register now</a>
                         </p>
                     </div>
                 </div>

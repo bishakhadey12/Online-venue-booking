@@ -54,6 +54,13 @@
           <span class="badge bg-success fs-6 p-3 rounded-pill">
             <i class="bi bi-check-circle-fill"></i> Booking made simple – Register, Reserve & Relax 🎊
           </span>
+
+    <section class="hero text-center">
+    <div>
+      <p class="lead">Weddings • Conferences • Parties • Concerts</p>
+      <a href="index.php" class="btn btn-warning btn-lg">Get Started</a>
+    </div>
+  </section>
         </p>
       </div>
     </div>
