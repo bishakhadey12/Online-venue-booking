@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     $vaddress = $_POST['vaddress'];
     $vtype = $_POST['vtype'];
     $price_per_day = $_POST['price_per_day'];
-    $venue_date = $_POST['venue_date'];
     $venue_other = $_POST['venue_other'];
     // Fetch existing images from DB
     $result = mysqli_query($conn, "SELECT venue_image FROM venue WHERE id=$id");
@@ -36,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     // Update venue
     $uquery = mysqli_query($conn, "UPDATE venue 
         SET vname='$vname', vaddress='$vaddress', vtype='$vtype', 
-            price_per_day=$price_per_day, venue_date='$venue_date', 
+            price_per_day=$price_per_day, 
             venue_other='$venue_other', venue_image='$venue_image_json'
         WHERE id=$id");
 

@@ -7,9 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $vaddress= $_POST['vaddress'];
     $vtype =$_POST['vtype'];
     $price_per_day =$_POST['price_per_day'];
-    $venue_date = $_POST['venue_date'];
     $venue_other = $_POST['venue_other'];
-
     $uploaded_images = [];
 
     if(isset($_FILES['venue_images'])){
@@ -27,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $venue_image_json = json_encode($uploaded_images);
 
-    $insert_query = mysqli_query($conn,"INSERT INTO `venue`(`vname`, `vaddress`, `vtype`, `price_per_day`, `venue_date`, `venue_image`, `venue_other`) VALUES ('$vname','$vaddress','$vtype','$price_per_day','$venue_date','$venue_image_json','$venue_other')");
+    $insert_query = mysqli_query($conn,"INSERT INTO `venue`(`vname`, `vaddress`, `vtype`, `price_per_day`,`venue_image`, `venue_other`) VALUES ('$vname','$vaddress','$vtype','$price_per_day','$venue_image_json','$venue_other')");
     if ($insert_query) {
         $_SESSION['sms'] = "Venue Created Successfully!"; 
     } else {

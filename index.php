@@ -3,14 +3,11 @@ session_start();
 $conn=mysqli_connect("localhost","root","","online_venue_booking");
 include("header.php");
 ?>
-
+<br>
 <div class="container text-success text-center">
-<?php
-if(isset($_SESSION['sms'])){
-    echo "<h3 class='text-success'>".$_SESSION['sms']."</h3>";
-    unset($_SESSION['sms']); // clear message
-}
-?>
+    <?php if(isset($_SESSION['sms'])): ?>
+       <div class="alert alert-success"><?php echo $_SESSION['sms']; unset($_SESSION['sms']); ?></div>
+    <?php endif; ?>
 </div>
   <!-- Reservation Form Section -->
   <section class="py-5">
@@ -79,5 +76,4 @@ if(isset($_SESSION['sms'])){
       </div>
     </div>
   </section>
-
-   <?php include("footer.php");?>
+<?php include("footer.php");?>

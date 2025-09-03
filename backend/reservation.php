@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     $email=$_POST['email'];
     $phone=$_POST['phone'];
     $venue=$_POST['venue'];
-    $bdate=$_POST['date'];
+    $booking_date=$_POST['date'];
     $Tguest=$_POST['guests'];
 
     $select_query=mysqli_query($conn,"SELECT * FROM `reservation` WHERE phno = $phone");
@@ -15,9 +15,9 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     header("location:../index.php");
     return;
     }else{
-        $insert_query=mysqli_query($conn,"INSERT INTO `reservation`(`Fname`, `email`, `phno`, `select_venue`, `booking_date`, `Tguests`) VALUES ('$Fname','$email','$phone','$venue','$bdate','$Tguest')");
+        $insert_query=mysqli_query($conn,"INSERT INTO `reservation`(`name`, `email`, `phno`, `venutyp`, `booking_date`, `Tguests`) VALUES ('$Fname','$email','$phone','$venue','$booking_date','$Tguest')");
         if($insert_query){
-        $_SESSION['sms']="Successfully reserved your place";
+        $_SESSION['sms']="Successfully reserved your place, you wiil get a call from us";
         header("location:../index.php");
         return;
         }

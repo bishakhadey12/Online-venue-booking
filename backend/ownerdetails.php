@@ -28,10 +28,6 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     $_SESSION['sms'] = "Registration Successful!";
         header("Location:../venue.php"); // redirect to venue creation
         exit;
-    } else {
-        $_SESSION['sms'] = "Error: ".mysqli_error($conn);
-        header("Location:../register.php");
-        exit;
-    }
+    } 
 }
 ?>

@@ -10,7 +10,6 @@ $venue = [
     'vaddress'=>'',
     'vtype'=>'',
     'price_per_day'=>'',
-    'venue_date'=>'',
     'venue_other'=>''
 ];
 
@@ -68,11 +67,6 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
         <div class="form-group mb-3">
             <label>Price Per Day</label>
             <input type="number" name="price_per_day" class="form-control" value="<?php echo htmlspecialchars($venue['price_per_day']); ?>" required>
-        </div>
-
-        <div class="form-group mb-3">
-            <label>Booking Date</label>
-            <input type="date" name="venue_date" class="form-control" value="<?php echo htmlspecialchars($venue['venue_date']); ?>" required>
         </div>
 
         <div class="form-group mb-3">
