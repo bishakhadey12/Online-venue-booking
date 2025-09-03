@@ -1,4 +1,6 @@
-<?php include("header.php")?>
+<?php include("header.php");
+session_start();
+?>
   <!-- Contact Header -->
   <section class="contact-header">
     <div class="text-center">
@@ -6,6 +8,12 @@
       <p class="lead">We’d love to hear from you</p>
     </div>
   </section>
+<br>
+    <?php if(isset($_SESSION['sms'])): ?>
+    <div class="alert alert-success">
+        <?php echo $_SESSION['sms']; unset($_SESSION['sms']); ?>
+    </div>
+<?php endif; ?>
 
   <!-- Contact Section -->
   <section class="py-5">
@@ -16,7 +24,8 @@
         <div class="col-md-6">
           <div class="form-section">
             <h3 class="mb-4 text-center">Send a Message</h3>
-            <form action="submit_contact.php" method="POST">
+  
+            <form action="backend/submit_contact.php" method="POST">
               <div class="mb-3">
                 <label class="form-label">Full Name</label>
                 <input type="text" name="name" class="form-control" required>
@@ -26,8 +35,8 @@
                 <input type="email" name="email" class="form-control" required>
               </div>
               <div class="mb-3">
-                <label class="form-label">Subject</label>
-                <input type="text" name="subject" class="form-control" required>
+                <label class="form-label">Subject/Query</label>
+                <input type="text" name="subject" class="form-control">
               </div>
               <div class="mb-3">
                 <label class="form-label">Message</label>

@@ -23,7 +23,7 @@
               <h5 class="card-title">Basic Hall</h5>
               <p class="card-text">Ideal for birthdays, small gatherings, and meetings.</p>
               <h3 class="text-primary">₹10,000</h3>
-              <a href="#" class="btn btn-outline-primary mt-2">Book Now</a>
+              <a href="#" class="btn btn-outline-primary mt-2" type="submit" action="">Book Now</a>
             </div>
           </div>
         </div>

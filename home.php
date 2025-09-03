@@ -17,8 +17,8 @@ $result = mysqli_query($conn, "SELECT * FROM venue ORDER BY created_at DESC");
             $first_image = $images[0] ?? 'default.jpg';
         ?>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-lg">
-                <img src="uploads/<?php echo $first_image; ?>" class="card-img-top" alt="Venue Image">
+            <div class="card shadow-sm">
+                <img src="uploads/<?php echo $first_image; ?>" class="card-img-top" alt="Venue Image" >
 
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $row['vname']; ?></h5>

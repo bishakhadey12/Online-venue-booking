@@ -1,7 +1,7 @@
 <?php include("header.php");
 session_start();
 ?>
-
+<br>
     <?php if(isset($_SESSION['sms'])): ?>
     <div class="alert alert-success">
         <?php echo $_SESSION['sms']; unset($_SESSION['sms']); ?>

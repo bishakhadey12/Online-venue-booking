@@ -26,8 +26,8 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 
    if($insert_query){
     $_SESSION['sms'] = "Registration Successful!";
-        header("Location:../venue.php"); // redirect to venue creation
-        exit;
+    header("Location:../venue.php"); // redirect to venue creation
+    return;
     } 
 }
 ?>

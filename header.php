@@ -65,10 +65,22 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="price.php">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="guide.php">Guide</a></li>
-          <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+          <?php
+          if(isset($_SESSION['user'])){
+            ?>
+            <li class="nav-item"><a class="nav-link" href="">Welcome <?php echo $_SESSION['user']['name']?></a></li>
+            <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+          <?php
+          }else{
+            ?>
+            <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+            <?php
+          }
+          ?>
+          
         </ul>
       </div>
     </div>
